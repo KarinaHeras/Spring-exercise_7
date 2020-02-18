@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <bean id="beanCliente" class="com.grupoatrium.modelo.Cliente"
+            p:nombre="Empresa Spring S.L."
+            p:nif="A-12345678" p:direccion="C/ Mayor, 16 28080 Madrid"/>
+
+    <bean id="beanFactura" class="com.grupoatrium.modelo.Factura"
+            p:cliente-ref="beanCliente" p:importe="10000" p:fecha="12/5/2011"/>
+
+</beans>
